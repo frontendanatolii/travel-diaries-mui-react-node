@@ -6,7 +6,7 @@ import { authActions } from "../../store/store";
 import { sendAuthRequest } from "../../api-helpers/helpers";
 
 const Auth = () => {
-  const naviagte = useNavigate();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignup, setIsSignup] = useState(true);
   const onResReceived = (data) => {
@@ -16,7 +16,7 @@ const Auth = () => {
       localStorage.setItem("userId", data.id);
     }
     dispatch(authActions.login());
-    naviagte("/diaries");
+    navigate("/diaries");
   };
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -66,7 +66,7 @@ export const postUpdate = async (data, id) => {
     .catch((err) => console.log(err));
 
   if (res.status !== 200) {
-    return console.log("Unable to udpate");
+    return console.log("Unable to update");
   }
 
   const resData = await res.data;
